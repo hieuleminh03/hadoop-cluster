@@ -35,6 +35,9 @@ services:
         hostname: active-rm
         ports:
             - 8088:8088
+            - 8030:8030
+            - 8031:8031
+            - 8032:8032
         command: bash -c "service ssh restart && sleep infinity"
         
     Standby-RM:
