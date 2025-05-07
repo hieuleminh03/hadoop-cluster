@@ -44,7 +44,7 @@ services:
         privileged: true
         networks:
             - Hadoop_Cluster
-        hostname: standby_rm
+        hostname: standby-rm
         ports:
             - 8089:8088
         command: bash -c "service ssh restart && sleep infinity"
