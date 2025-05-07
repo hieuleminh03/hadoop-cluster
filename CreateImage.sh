@@ -8,10 +8,6 @@ cd ./Workers
 docker image build -t demo/workers . --no-cache
 cd ..
 
-cd ./Spark
-docker image build -t demo/spark . --no-cache
-cd ..
-
 cd ./JournalNode1
 docker image build -t demo/journalnode1 . --no-cache
 cd ..

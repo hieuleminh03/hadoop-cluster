@@ -132,19 +132,6 @@ services:
         command: bash -c "service ssh restart && sleep infinity"
        
     
-    Spark:
-        container_name: spark
-        image: demo/spark
-        user: root
-        privileged: true
-        networks:
-            - Hadoop_Cluster
-        hostname: spark
-        ports:
-            - 8888:8888
-            - 4040:4040
-        command: bash -c "service ssh restart && sleep infinity"
-
 networks:
     Hadoop_Cluster:
         driver: bridge

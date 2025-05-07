@@ -47,46 +47,46 @@ limitations under the License. See accompanying LICENSE file. -->
   </property>
   <property>
     <name>yarn.resourcemanager.ha.rm-ids</name>
-    <value>rm1,rm2</value>
+    <value>active,standby</value>
   </property>
   <property>
-  <name>yarn.resourcemanager.hostname.rm1</name>
+  <name>yarn.resourcemanager.hostname.active</name>
     <value>active-rm</value>
   </property>
   <property>
-    <name>yarn.resourcemanager.hostname.rm2</name>
+    <name>yarn.resourcemanager.hostname.standby</name>
     <value>standby-rm</value>
   </property>
   <property>
-    <name>yarn.resourcemanager.webapp.address.rm1</name>
+    <name>yarn.resourcemanager.webapp.address.active</name>
     <value>active-rm:8088</value>
   </property>
   <property>
-    <name>yarn.resourcemanager.webapp.address.rm2</name>
+    <name>yarn.resourcemanager.webapp.address.standby</name>
     <value>standby-rm:8088</value>
   </property>
   <property>
-    <name>yarn.resourcemanager.scheduler.address.rm1</name>
+    <name>yarn.resourcemanager.scheduler.address.active</name>
     <value>active-rm:8030</value>
   </property>
   <property>
-    <name>yarn.resourcemanager.scheduler.address.rm2</name>
+    <name>yarn.resourcemanager.scheduler.address.standby</name>
     <value>standby-rm:8030</value>
   </property>
   <property>
-    <name>yarn.resourcemanager.resource-tracker.address.rm1</name>
+    <name>yarn.resourcemanager.resource-tracker.address.active</name>
     <value>active-rm:8031</value>
   </property>
   <property>
-    <name>yarn.resourcemanager.resource-tracker.address.rm2</name>
+    <name>yarn.resourcemanager.resource-tracker.address.standby</name>
     <value>standby-rm:8031</value>
   </property>
   <property>
-    <name>yarn.resourcemanager.address.rm1</name>
+    <name>yarn.resourcemanager.address.active</name>
     <value>active-rm:8032</value>
   </property>
   <property>
-    <name>yarn.resourcemanager.address.rm2</name>
+    <name>yarn.resourcemanager.address.standby</name>
     <value>standby-rm:8032</value>
   </property>
   <property>
