@@ -2,7 +2,9 @@ FROM demo/hadoopha
 
 USER root
 
-RUN apt-get -y install python3-pip
+RUN apt-get update && apt-get install -y python3-venv
+RUN python3 -m venv /opt/venv 
+ENV PATH="/opt/venv/bin:$PATH"
 
 # Download  Spark
 RUN cd /usr/local && wget -O ./spark.tar.gz https://archive.apache.org/dist/spark/spark-3.0.3/spark-3.0.3-bin-hadoop2.7.tgz && tar -xvf spark.tar.gz && chown root: -R /usr/local/spark-3.0.3-bin-hadoop2.7 && mv spark-3.0.3-bin-hadoop2.7 spark
