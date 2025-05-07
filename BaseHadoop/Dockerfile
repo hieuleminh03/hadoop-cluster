@@ -1,4 +1,4 @@
-FROM ubuntu:25.04
+FROM ubuntu:20.04
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 USER root
