@@ -3,7 +3,7 @@ FROM demo/hadoopha
 USER root
 
 # Download journalnode
-RUN cd /usr/local && wget -O ./zookeeper.tar.gz https://downloads.apache.org/zookeeper/zookeeper-3.6.3/apache-zookeeper-3.6.3-bin.tar.gz && tar -xvf zookeeper.tar.gz && chown root: -R /usr/local/apache-zookeeper-3.6.3-bin && mv apache-zookeeper-3.6.3-bin zookeeper
+RUN cd /usr/local && wget -O ./zookeeper.tar.gz https://archive.apache.org/dist/zookeeper/zookeeper-3.6.3/apache-zookeeper-3.6.3-bin.tar.gz && tar -xvf zookeeper.tar.gz && chown root: -R /usr/local/apache-zookeeper-3.6.3-bin && mv apache-zookeeper-3.6.3-bin zookeeper
 
 # Set Zookeeper
 RUN cd /usr/local/zookeeper/conf && cp zoo_sample.cfg zoo.cfg

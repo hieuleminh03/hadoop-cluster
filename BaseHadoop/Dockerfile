@@ -16,9 +16,9 @@ RUN ssh-keygen -t rsa -f ~/.ssh/id_rsa -P '' && cat /root/.ssh/id_rsa.pub >> /ro
 RUN sed -i 's/#   StrictHostKeyChecking ask/StrictHostKeyChecking accept-new/' /etc/ssh/ssh_config
 
 # Download  Hadoop
-RUN cd /usr/local && wget -O ./hadoop.tar.gz https://downloads.apache.org/hadoop/common/hadoop-3.3.1/hadoop-3.3.1.tar.gz && tar -xvf hadoop.tar.gz && chown root: -R /usr/local/hadoop-3.3.1 && mv hadoop-3.3.1 hadoop
+RUN cd /usr/local && wget -O ./hadoop.tar.gz https://archive.apache.org/dist/hadoop/common/hadoop-3.3.1/hadoop-3.3.1.tar.gz && tar -xvf hadoop.tar.gz && chown root: -R /usr/local/hadoop-3.3.1 && mv hadoop-3.3.1 hadoop
 # Download  Hive
-RUN cd /usr/local && wget -O ./hive.tar.gz https://apache.website-solution.net/hive/stable-2/apache-hive-2.3.9-bin.tar.gz && tar -xvf hive.tar.gz && chown root: -R /usr/local/apache-hive-2.3.9-bin && mv apache-hive-2.3.9-bin hive
+RUN cd /usr/local && wget -O ./hive.tar.gz https://archive.apache.org/dist/hive/hive-2.3.9/apache-hive-2.3.9-bin.tar.gz && tar -xvf hive.tar.gz && chown root: -R /usr/local/apache-hive-2.3.9-bin && mv apache-hive-2.3.9-bin hive
 
 RUN echo -e $'# JAVA set environment variables\n\
 JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64\n\

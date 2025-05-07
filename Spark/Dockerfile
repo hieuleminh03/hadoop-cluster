@@ -1,12 +1,11 @@
-FROM hsuan8169/hadoopha
-MAINTAINER Hsuan hsuan8169@gmail.com
+FROM demo/hadoopha
 
 USER root
 
 RUN apt-get -y install python3-pip
 
 # Download  Spark
-RUN cd /usr/local && wget -O ./spark.tar.gz https://downloads.apache.org/spark/spark-3.0.3/spark-3.0.3-bin-hadoop2.7.tgz && tar -xvf spark.tar.gz && chown root: -R /usr/local/spark-3.0.3-bin-hadoop2.7 && mv spark-3.0.3-bin-hadoop2.7 spark
+RUN cd /usr/local && wget -O ./spark.tar.gz https://archive.apache.org/dist/spark/spark-3.0.3/spark-3.0.3-bin-hadoop2.7.tgz && tar -xvf spark.tar.gz && chown root: -R /usr/local/spark-3.0.3-bin-hadoop2.7 && mv spark-3.0.3-bin-hadoop2.7 spark
 
 RUN echo -e $'# Set Spark environment\n\
 export SPARK_HOME="/usr/local/spark"\n\
